@@ -1,18 +1,20 @@
 import "./App.css";
+import { ContainerTickets } from "./components/ContainerTickets";
 import { InfoRifa } from "./components/InfoRifa";
-import { ListOfTickets } from "./components/ListOfTickets";
+import { Verificador } from "./components/Verificador";
 import { Footer } from "./components/layout/Footer";
-import { Header } from "./components/layout/Header";
+import { Navbar } from "./components/layout/Navbar";
 
 function App() {
 
 	// obtenerTickets(tickets)
 
 	return <>
-		<Header />
+		<Navbar />
 		<main className="container">
 			<InfoRifa />
-			<ListOfTickets />
+			<ContainerTickets />
+			<Verificador />
 		</main>
 		<Footer />
 	</>;

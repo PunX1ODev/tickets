@@ -1,6 +1,6 @@
-export function Header() {
+export function Navbar() {
 	return (
-		<nav className="navbar navbar-expand-lg navbar-dark bg-success">
+		<nav className="navbar navbar-expand-lg navbar-dark bg-success fixed-top">
 			<div className="container-fluid">
 				<a className="navbar-brand" href="/">
 					Tickets Frontend
@@ -26,11 +26,6 @@ export function Header() {
 						<li className="nav-item">
 							<a className="nav-link" href="/">
 								VERIFICADOR
-							</a>
-						</li>
-						<li className="nav-item">
-							<a className="nav-link" href="/">
-								PREGUNTAS
 							</a>
 						</li>
 						<li className="nav-item">

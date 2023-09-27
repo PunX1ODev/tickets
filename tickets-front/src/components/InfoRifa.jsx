@@ -1,6 +1,6 @@
 export function InfoRifa() {
     return (
-        <div className="container">
+        <section className="container my-5">
             <div className="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center">
                 <div className="col-lg-7 p-3 p-lg-5 pt-lg-3">
                     <h3 className="fw-bold">31 Dic 2023 - 20:00 pm (col)</h3>
@@ -26,6 +26,6 @@ export function InfoRifa() {
                     <img className="rounded-lg-3" src="https://images.wallpaperscraft.com/image/single/sports_car_drift_race_131217_360x640.jpg" alt="" width="500" />
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
