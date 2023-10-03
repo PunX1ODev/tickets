@@ -1,14 +1,61 @@
-import { useState } from 'react';
 import { Buttons } from "./Buttons";
 import { FormPagos } from "./FormPagos";
+import { Tickets } from "./Tickets";
 
-
-const tickets = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
+const tickets = [
+    {
+        number: 1,
+        name: 'Juan Quintero',
+        isSelect: true
+    },
+    {
+        number: 2,
+        name: '',
+        isSelect: false
+    },
+    {
+        number: 3,
+        name: 'JuaneFe14',
+        isSelect: true
+    },
+    {
+        number: 4,
+        name: '',
+        isSelect: false
+    },
+    {
+        number: 5,
+        name: 'eFe14',
+        isSelect: true
+    },
+    {
+        number: 6,
+        name: '',
+        isSelect: false
+    },
+    {
+        number: 7,
+        name: '',
+        isSelect: false
+    },
+    {
+        number: 8,
+        name: '',
+        isSelect: false
+    },
+    {
+        number: 9,
+        name: '',
+        isSelect: false
+    },
+    {
+        number: 10,
+        name: '',
+        isSelect: false
+    },
+]
 
 export function ContainerTickets() {
-    const [seleccionadas, setSeleccionadas] = useState('')
-
     return (
         <section className="container text-center my-5">
             <div className="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 shadow-lg">
@@ -22,12 +69,18 @@ export function ContainerTickets() {
                     <button type="button" className="my-2 btn btn-outline-primary">ELEGIR A LA SUERTE</button>
                     <article className='container'>
                         {
-                            tickets.map((number) => (
-                                <button type="button" key={number} className='btn btn-outline-primary btn-sm'>{number}</button>
+                            tickets.map(({ number, name, isSelect }) => (
+                                <Tickets
+                                    key={number}
+                                    number={number}
+                                    name={name}
+                                    initialIsSelect={isSelect}
+                                >
+                                </Tickets>
                             ))
                         }
                         <div className="text-muted">
-                            Seleccionadas: <span>{seleccionadas}</span>
+                            Seleccionadas: <span> </span>
                         </div>
                     </article>
                     <article className='container'>
